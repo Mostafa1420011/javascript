@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ********* -->
+    <link rel="stylesheet" href="./dist/main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <nav>
+          <div class="nav__title">calculator</div>
+          <div class="nav__themes">
+            <span class="btn" tabindex="0" role="button"></span>
+          </div>
+        </nav>
+      </header>
+      <div class="container__screen screen">0</div>
+      <div class="container__control control">
+        <button data-type="operator" class="ac">C</button>
+        <button data-type="operator" class="delete1">del</button>
+        <button data-type="number" class="zero number">0</button>
+        <button data-type="number" class="one number">1</button>
+        <button data-type="number" class="two number">2</button>
+        <button data-type="number" class="three number">3</button>
+        <button data-type="number" class="four number">4</button>
+        <button data-type="number" class="five number">5</button>
+        <button data-type="number" class="six number">6</button>
+        <button data-type="number" class="seven number">7</button>
+        <button data-type="number" class="eigh number t">8</button>
+        <button data-type="number" class="nine number">9</button>
+        <button data-type="number" class="dot number">.</button>
+        <button data-type="operator" class="plus operator">+</button>
+        <button data-type="operator" class="Sub operator">-</button>
+        <button data-type="operator" class="Mult operator">*</button>
+        <button data-type="operator" class="Divide operator">/</button>
+        <button data-type="operator" class="equal">=</button>
+      </div>
+    </main>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>

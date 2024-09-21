@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 40px auto;
+  min-width: 30px;
+  min-height: 300px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+}
+
+header {
+  width: 100%;
+}
+header nav {
+  width: 100%;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav__title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.container__screen {
+  width: 100%;
+  height: 70px;
+  font-size: 40px;
+  font-weight: 900;
+  background-color: #d1e9f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 10px;
+}
+
+.container__control {
+  background-color: #d1e9f6;
+  width: 100%;
+  border-radius: 10px;
+  height: 400px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  grid-template-areas: "ac ac delete1 Divide" "seven eight nine Mult" "four five six Sub" "one two three plus" "zero zero dot equal ";
+}
+.container__control button {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+.container__control button i {
+  font-size: 20px;
+}
+.container__control button:hover {
+  color: black;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+@keyframes scale {
+  to {
+    transform: scale(0.6);
+  }
+}
+.container__control .number {
+  background-color: #5d0e41;
+}
+.container__control .operator {
+  background-color: #ff204e;
+}
+.container__control .Divide {
+  grid-area: Divide;
+}
+.container__control .Mult {
+  grid-area: Mult;
+}
+.container__control .delete1 {
+  grid-area: delete1;
+  background-color: #a0153e;
+}
+.container__control .Sub {
+  grid-area: Sub;
+}
+.container__control .equal {
+  grid-area: equal;
+  background-color: rgba(70, 15, 26, 0.6196078431);
+}
+.container__control .dot {
+  grid-area: dot;
+}
+.container__control .ac {
+  grid-area: ac;
+  width: 168px;
+  height: 65px;
+  border-radius: 15px;
+  background-color: #430a5d;
+}
+.container__control .zero {
+  grid-area: zero;
+  width: 168px;
+  height: 65px;
+  border-radius: 15px;
+}
+.container__control .plus {
+  grid-area: plus;
+}
+.container__control .one {
+  grid-area: one;
+}
+.container__control .one {
+  grid-area: one;
+}
+.container__control .two {
+  grid-area: two;
+}
+.container__control .three {
+  grid-area: three;
+}
+.container__control .four {
+  grid-area: four;
+}
+.container__control .five {
+  grid-area: five;
+}
+.container__control .six {
+  grid-area: six;
+}
+.container__control .seven {
+  grid-area: seven;
+}
+.container__control .eight {
+  grid-area: eight;
+}
+.container__control .nine {
+  grid-area: nine;
+}
+
+.container header nav .nav__themes {
+  width: 60px;
+  height: 20px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+}
+.container header nav .nav__themes .btn {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  border: 0;
+}
+.container header nav .nav__themes .btn:hover {
+  width: 14px;
+  height: 14px;
+}
+
+.body_dark {
+  background-color: black;
+  background-image: none;
+}
+
+.container_dark {
+  transition: 0.5s all;
+  background-color: black;
+  box-shadow: 0px 0px 10px white;
+}
+
+.toggle_dark {
+  border: 1px solid white;
+}
+.toggle_dark .btn {
+  transition: 0.5s all;
+  transform: translateX(40px);
+}
+
+.screen_dark {
+  transition: 0.5s all;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 20px inset black;
+}
+
+.control_dark {
+  transition: 0.5s all;
+  background-color: transparent;
+}
+.control_dark .operator {
+  background-color: #ffa62f;
+}
+.control_dark .number {
+  background-color: rgba(255, 255, 255, 0.308);
+}
+.control_dark .ac {
+  background-color: rgba(255, 255, 255, 0.636);
+}
+.control_dark .delete1 {
+  background-color: #d8ae7e;
+}
+.control_dark .delete1 i {
+  color: white;
+}
+.control_dark .equal {
+  background-color: rgba(255, 165, 47, 0.568627451);
+}
+
+.color-white {
+  transition: 0.5s all;
+  color: white;
+}/*# sourceMappingURL=main.css.map */
