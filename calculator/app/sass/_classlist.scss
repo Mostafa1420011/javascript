@@ -1,54 +1,54 @@
 .body_dark {
   background-color: black;
-  background-image: none;
-}
-
-.container_dark {
-  transition: 0.5s all;
-  background-color: black;
-  box-shadow: 0px 0px 10px white;
-}
-
-.toggle_dark {
-  border: 1px solid white;
-  .btn {
+  .container {
     transition: 0.5s all;
-    transform: translateX(40px);
-  }
-}
-
-.screen_dark {
-  transition: 0.5s all;
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 20px inset black;
-}
-
-.control_dark {
-  transition: 0.5s all;
-  background-color: transparent;
-  .operator {
-    background-color: #ffa62f;
-  }
-  .number {
-    background-color: rgba(255, 255, 255, 0.308);
-  }
-  .ac {
-    background-color: rgba(255, 255, 255, 0.636);
-  }
-  .delete1 {
-    background-color: #d8ae7e;
-    i {
-      color: white;
+    background-color: black;
+    box-shadow: 0px 0px 10px white;
+    header {
+      nav {
+        .nav__title {
+          color: white;
+        }
+        .nav__themes {
+          border: 1px solid white;
+          .btn {
+            transition: 0.5s all;
+            transform: translateX(40px);
+          }
+        }
+      }
+    }
+    .screen {
+      transition: 0.5s all;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 20px inset black;
+    }
+    .control {
+      transition: 0.5s all;
+      background-color: transparent;
+      .operator {
+        background-color: #ffa62f;
+      }
+      .number {
+        background-color: rgba(255, 255, 255, 0.308);
+      }
+      .ac {
+        background-color: rgba(255, 255, 255, 0.636);
+      }
+      .delete1 {
+        background-color: #d8ae7e;
+        i {
+          color: white;
+        }
+      }
+      .equal {
+        background-color: #ffa52f91;
+      }
     }
   }
-
-  .equal {
-    background-color: #ffa52f91;
-  }
 }
 
-.color-white {
-  transition: 0.5s all;
-  color: white;
+.buttonClick {
+  animation: click 0.1s ease;
 }

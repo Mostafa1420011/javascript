@@ -1,25 +1,17 @@
 // #3004788
-
 /*  ******************  themes ******************** */
+const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const title = document.querySelector('.nav__title');
 const navThemes = document.querySelector('.nav__themes');
 const control = document.querySelector('.control');
 const nav = document.querySelector('nav');
-const body = document.querySelector('body');
 const btn = document.querySelectorAll('button');
 const span = document.querySelector('.btn');
-
 const changeThemes = () => {
-  nav.classList.toggle('color-white');
-  container.classList.toggle('container_dark');
-  navThemes.classList.toggle('toggle_dark');
-  screen.classList.toggle('screen_dark');
-  control.classList.toggle('control_dark');
   body.classList.toggle('body_dark');
 };
 const changeThemesEnter = (e) => e.key === 'Enter' && changeThemes();
-
 navThemes.addEventListener('click', changeThemes);
 span.addEventListener('keydown', changeThemesEnter); // function to keydown Enter to go
 /* ************End themes script************* */
@@ -70,22 +62,16 @@ const calculateFunction = () => {
       case '-':
         storageNum -= currentNum;
         currentNum = '';
-
-        if (storageNum.toFixed(4)) {
-          return updateValue(storageNum.toFixed(4));
-        }
         return updateValue(storageNum);
 
       case '*':
         storageNum *= currentNum;
         currentNum = '';
-
         return updateValue(storageNum);
 
       case '/':
-        storageNum += currentNum;
+        storageNum /= currentNum;
         currentNum = '';
-
         return updateValue(storageNum);
     }
   }
@@ -103,8 +89,16 @@ const operationButtonHandler = (opeValue) => {
   if (current) calculateFunction;
 };
 
+const btnAnimation = (ele) => {
+  ele.classList.add('buttonClick');
+  setTimeout(() => {
+    ele.classList.remove('buttonClick');
+  }, 100);
+};
+
 const allKeysHandler = (ele) => {
-  ele.addEventListener('click', (e) => {
+  ele.addEventListener('click', () => {
+    btnAnimation(ele);
     const type = ele.dataset.type;
     if (type === 'number') {
       numberBtnHandler(ele.textContent);
@@ -122,6 +116,7 @@ const allKeysHandler = (ele) => {
     }
   });
 };
+
 let keyHandler = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 let operatorHandler = ['+', '-', '*', '/'];
 window.addEventListener('keydown', (e) => {

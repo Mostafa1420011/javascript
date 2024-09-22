@@ -1,19 +1,25 @@
 .container__control {
-  background-color: #d1e9f6;
+  background-color: #295f98;
   width: 100%;
   border-radius: 10px;
   height: 400px;
   display: grid;
   align-items: center;
   justify-items: center;
-  justify-content: space-evenly;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  @media (max-width: 400px) {
+    gap: 10px;
+  }
+  gap: 0px;
 
   grid-template-areas:
     'ac ac delete1 Divide'
     'seven eight nine Mult'
     'four five six Sub'
     'one two three plus'
-    'zero zero dot equal ';
+    'zero zero dot equal';
   button {
     width: 65px;
     height: 65px;
@@ -30,24 +36,17 @@
       font-size: 20px;
     }
     &:hover {
-      color: black;
       opacity: 0.8;
       transition: all 0.5s;
     }
   }
 
-  @keyframes scale {
-    to {
-      transform: scale(0.6);
-    }
-  }
-
   .number {
-    background-color: #5d0e41;
+    background-color: #6482ad;
   }
 
   .operator {
-    background-color: #ff204e;
+    background-color: #6482ad;
   }
   .Divide {
     grid-area: Divide;
@@ -59,7 +58,7 @@
 
   .delete1 {
     grid-area: delete1;
-    background-color: #a0153e;
+    background-color: #6482ad;
   }
 
   .Sub {
@@ -67,7 +66,7 @@
   }
   .equal {
     grid-area: equal;
-    background-color: #460f1a9e;
+    background-color: #6482ad;
   }
 
   .dot {
@@ -79,7 +78,7 @@
     width: 168px;
     height: 65px;
     border-radius: 15px;
-    background-color: #430a5d;
+    background-color: #7fa1c3;
   }
 
   .zero {

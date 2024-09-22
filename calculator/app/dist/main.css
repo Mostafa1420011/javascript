@@ -6,16 +6,15 @@
 }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  margin: 40px auto;
-  min-width: 30px;
+  margin: 40px 10px;
+  width: 400px;
   min-height: 300px;
-  max-width: 400px;
   box-shadow: 0px 0px 10px black;
   display: flex;
   flex-direction: column;
@@ -48,24 +47,32 @@ header nav .nav__title {
   height: 70px;
   font-size: 40px;
   font-weight: 900;
-  background-color: #d1e9f6;
+  background-color: #295f98;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
   border-radius: 10px;
 }
 
 .container__control {
-  background-color: #d1e9f6;
+  background-color: #295f98;
   width: 100%;
   border-radius: 10px;
   height: 400px;
   display: grid;
   align-items: center;
   justify-items: center;
-  justify-content: space-evenly;
-  grid-template-areas: "ac ac delete1 Divide" "seven eight nine Mult" "four five six Sub" "one two three plus" "zero zero dot equal ";
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0px;
+  grid-template-areas: "ac ac delete1 Divide" "seven eight nine Mult" "four five six Sub" "one two three plus" "zero zero dot equal";
+}
+@media (max-width: 400px) {
+  .container__control {
+    gap: 10px;
+  }
 }
 .container__control button {
   width: 65px;
@@ -84,20 +91,14 @@ header nav .nav__title {
   font-size: 20px;
 }
 .container__control button:hover {
-  color: black;
   opacity: 0.8;
   transition: all 0.5s;
 }
-@keyframes scale {
-  to {
-    transform: scale(0.6);
-  }
-}
 .container__control .number {
-  background-color: #5d0e41;
+  background-color: #6482ad;
 }
 .container__control .operator {
-  background-color: #ff204e;
+  background-color: #6482ad;
 }
 .container__control .Divide {
   grid-area: Divide;
@@ -107,14 +108,14 @@ header nav .nav__title {
 }
 .container__control .delete1 {
   grid-area: delete1;
-  background-color: #a0153e;
+  background-color: #6482ad;
 }
 .container__control .Sub {
   grid-area: Sub;
 }
 .container__control .equal {
   grid-area: equal;
-  background-color: rgba(70, 15, 26, 0.6196078431);
+  background-color: #6482ad;
 }
 .container__control .dot {
   grid-area: dot;
@@ -124,7 +125,7 @@ header nav .nav__title {
   width: 168px;
   height: 65px;
   border-radius: 15px;
-  background-color: #430a5d;
+  background-color: #7fa1c3;
 }
 .container__control .zero {
   grid-area: zero;
@@ -189,54 +190,57 @@ header nav .nav__title {
 
 .body_dark {
   background-color: black;
-  background-image: none;
 }
-
-.container_dark {
+.body_dark .container {
   transition: 0.5s all;
   background-color: black;
   box-shadow: 0px 0px 10px white;
 }
-
-.toggle_dark {
+.body_dark .container header nav .nav__title {
+  color: white;
+}
+.body_dark .container header nav .nav__themes {
   border: 1px solid white;
 }
-.toggle_dark .btn {
+.body_dark .container header nav .nav__themes .btn {
   transition: 0.5s all;
   transform: translateX(40px);
 }
-
-.screen_dark {
+.body_dark .container .screen {
   transition: 0.5s all;
   background-color: white;
   color: black;
   box-shadow: 0 0 20px inset black;
 }
-
-.control_dark {
+.body_dark .container .control {
   transition: 0.5s all;
   background-color: transparent;
 }
-.control_dark .operator {
+.body_dark .container .control .operator {
   background-color: #ffa62f;
 }
-.control_dark .number {
+.body_dark .container .control .number {
   background-color: rgba(255, 255, 255, 0.308);
 }
-.control_dark .ac {
+.body_dark .container .control .ac {
   background-color: rgba(255, 255, 255, 0.636);
 }
-.control_dark .delete1 {
+.body_dark .container .control .delete1 {
   background-color: #d8ae7e;
 }
-.control_dark .delete1 i {
+.body_dark .container .control .delete1 i {
   color: white;
 }
-.control_dark .equal {
+.body_dark .container .control .equal {
   background-color: rgba(255, 165, 47, 0.568627451);
 }
 
-.color-white {
-  transition: 0.5s all;
-  color: white;
+.buttonClick {
+  animation: click 0.1s ease;
+}
+
+@keyframes click {
+  to {
+    transform: scale(0.9);
+  }
 }/*# sourceMappingURL=main.css.map */
