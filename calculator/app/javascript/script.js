@@ -50,29 +50,28 @@ const deleteLastItem = () => {
 };
 
 const calculateFunction = () => {
-  let currentNum = parseFloat(current);
-  let storageNum = parseFloat(storage);
-
-  if (currentNum && operator && storageNum) {
+  if (current && operator && storage) {
     switch (operator) {
       case '+':
-        storageNum += currentNum;
-        currentNum = '';
-        return updateValue(storageNum);
+        storage = parseFloat(storage) + parseFloat(current);
+        current = '';
+        updateValue(storage);
+        break;
       case '-':
-        storageNum -= currentNum;
-        currentNum = '';
-        return updateValue(storageNum);
-
+        storage = parseFloat(storage) - parseFloat(current);
+        current = '';
+        updateValue(storage);
+        break;
       case '*':
-        storageNum *= currentNum;
-        currentNum = '';
-        return updateValue(storageNum);
-
+        storage = parseFloat(storage) * parseFloat(current);
+        current = '';
+        updateValue(storage);
+        break;
       case '/':
-        storageNum /= currentNum;
-        currentNum = '';
-        return updateValue(storageNum);
+        storage = parseFloat(storage) / parseFloat(current);
+        current = '';
+        updateValue(storage);
+        break;
     }
   }
 };
@@ -86,7 +85,7 @@ const operationButtonHandler = (opeValue) => {
   } else if (storage) {
     operator = opeValue;
   }
-  if (current) calculateFunction;
+  if (current) calculateFunction();
 };
 
 const btnAnimation = (ele) => {
